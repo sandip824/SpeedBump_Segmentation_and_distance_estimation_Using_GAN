@@ -27,19 +27,46 @@ the trained model in the vehicle
 
 ## Data and Data Collection
 
-Considering the Indian road conditions there are different types of speed bumps present on the road. The different condition for detection of speed bump like bumps with markings and without
-markings, with faded paint, during low light conditions, occluded speed bumps etc. The data was collected covering all possible detection conditions mentioned above.
-Speed bump images were captured from a known distance. To capture the images from a known distance a tool was developed using python.
+Considering the Indian road conditions there are different types of speed bumps present on the road. The different condition for detection of speed bump like bumps with markings and without markings, with faded paint, during low light conditions, occluded speed bumps etc. The data was collected covering all possible detection conditions mentioned above.
+Speed bump images were captured from a known distance. To capture the images from a known distance a tool was developed using python. refer Data_Collector.py file to checkout the data collection tool.
 
 ![Data and Data Collection](readme_images/Tool_developed_for_data_collection.png) 
 
 ##  Data Annotation
 The input format of the
-data which needs to fed in to the GAN network is both original image and its corresponding label
-concatenated as a single image. A sample is as shown in fig
-
+data which needs to fed in to the GAN network is both original image and its corresponding label concatenated as a single image. A sample is as shown in fig
 ![Data Annotation](readme_images/annotation_tool.png) 
 
 
+Labelme :https://github.com/wkentaro/labelme
+Download the annotation tool from this repository.
+
+## Pix2Pix
+copy repository
+https://github.com/affinelayer/pix2pix-tensorflow
+create databse folder and put the annoted images within test, train,val folder. 
+Following fig illustrating the high level training procedure for implementing cGAN for Speed bump segmentation.
+First the input will be served to generator along wit the conditioned label(i.e. segmented speed bump). The labeling needs to be done manually.  
+At the start of training generator will start generating samples starting with random noise, the discriminator will find the loss between conditioned and generated label and give feedback to generator.
+This loop will continue and generator becomes more  and more accurate to generate labels close to original as training progresses.
+![Proposed work](readme_images/proposed_work.png) 
+
+## Model Training
+The Model was trained for collected images and after changing few parameters without making any architectural changes we were able to achive reasonable results.
+## Results
+![results1](readme_images/results1.png) 
+![results2](readme_images/results2.png) 
+![results3](readme_images/results3.png) 
+
+
+## Publication
+S. O. Patil, V. V. Sajith Variyar. and K. P. Soman, ”Speed Bump Segmentation an Application of
+Conditional Generative Adversarial Network for Self-driving Vehicles,” 2020 Fourth International
+Conference on Computing Methodologies and Communication (ICCMC), Erode, India, 2020, pp.
+935-939, doi: 10.1109/ICCMC48092.2020.ICCMC-000173.
+
+## Referances
+Labelme :https://github.com/wkentaro/labelme
+Pix2pix :https://github.com/affinelayer/pix2pix-tensorflow
 
 
