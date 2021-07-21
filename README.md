@@ -6,7 +6,7 @@ The intervention of AI technology and self-driving vehicles changed the transpor
 Speed bump detection was the major challenge from year’s back and various approaches were
 developed to address this issue. Some earlier approach for speed bump detection are as follows.
 
-     1. Conventional image processing
+     1.Conventional image processing
      2.Depth sensors
      3.Accelerometer-based detection
      4.AI and ML
