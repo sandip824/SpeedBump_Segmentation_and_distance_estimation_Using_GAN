@@ -65,7 +65,7 @@ Conditional Generative Adversarial Network for Self-driving Vehicles,” 2020 Fo
 Conference on Computing Methodologies and Communication (ICCMC), Erode, India, 2020, pp.
 935-939, doi: 10.1109/ICCMC48092.2020.ICCMC-000173.
 
-## Referances
+## References
 Labelme :https://github.com/wkentaro/labelme
 Pix2pix :https://github.com/affinelayer/pix2pix-tensorflow
 
